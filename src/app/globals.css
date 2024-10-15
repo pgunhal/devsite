@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace !important;
+  padding-top: 70px; /* To offset navbar */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.typing {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+  border-right: 2px solid var(--foreground);
+  width: 100%; 
+  display: inline-block;
+  animation: typing 4s steps(30, end) forwards; 
+}
+
+.blinking-cursor {
+  animation: blink 1s step-end infinite; 
+}
+
+/*
+TODO:
+work 
+hobbies/personal
+socials
+picture/bio
+**/

@@ -1,0 +1,12 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore log files and build directories
+.next/
+.cache/
+dist/
+.env
+
+# Ignore other OS-generated or editor files
+.DS_Store
+.vscode/
