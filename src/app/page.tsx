@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import Head from 'next/head';
 
 export default function HomePage() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
@@ -19,6 +19,11 @@ export default function HomePage() {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
+
+
       <nav className="bg-background-light text-white p-5 fixed w-full top-0 z-10 shadow-md flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold tracking-wide">Pranav Gunhal</h1>
@@ -55,7 +60,7 @@ export default function HomePage() {
             <div className="absolute top-0 -left-5 h-full w-1 bg-lime-green"></div>
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
               <p className="text-lg text-gray-text">
-                I’m an experienced developer and student at UCSB passionate about creating scalable, 
+                I’m a full-stack developer and undergraduate at UCSB passionate about creating scalable, 
             real-world solutions with ML. With a background in machine learning, sustainable tech, and software development, 
             I enjoy leveraging my technical skills to tackle modern challenges.              </p>
             </div>
@@ -272,10 +277,8 @@ export default function HomePage() {
               <p className="text-lg text-gray-text">
                In my free time, I enjoy biking and sketching. 
                I love exploring new cuisines and trying out different vegan recipes too. 
-               I spend time reading up on emerging technologies as well, 
-               especially in AI and machine learning, to stay current with industry trends. 
-               When I want to unwind, I like to watch documentaries, particularly ones 
-               focused on history and science. I also run a religious art <a href="https://narasimhasniche.weebly.com" className="underline hover:text-lime-green transition duration-300">blog</a>  with some of my sketches. 
+               I'm a member of UCSB's Model UN Team and Gaucho Racing, as well as part of 
+               the organizing team of Gaucho Hacks, UCSB's student-run hackathon.  I also run a religious art <a href="https://narasimhasniche.weebly.com" className="underline hover:text-lime-green transition duration-300">blog</a>  with some of my sketches. 
 
               </p>
             </div>
