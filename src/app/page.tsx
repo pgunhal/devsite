@@ -278,7 +278,7 @@ export default function HomePage() {
                In my free time, I enjoy biking and sketching. 
                I love exploring new cuisines and trying out different vegan recipes too. 
                I'm a member of UCSB's Model UN Team and Gaucho Racing, as well as part of 
-               the organizing team of Gaucho Hacks, UCSB's student-run hackathon.  I also run a religious art <a href="https://narasimhasniche.weebly.com" className="underline hover:text-lime-green transition duration-300">blog</a>  with some of my sketches. 
+               the organizing team of Gaucho Hacks, UCSB's student-run hackathon.  I also run an art <a href="https://narasimhasniche.weebly.com" className="underline hover:text-lime-green transition duration-300">blog</a>  with some of my sketches. 
 
               </p>
             </div>
