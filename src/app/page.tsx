@@ -578,10 +578,7 @@ function PersonalSection() {
                 sub: "SB Hacks · UCSB's Student-Run Hackathon",
                 detail: "Organizing one of the largest collegiate hackathons in the UC system",
               },
-              {
-                label: "Gaucho Racing",
-                sub: "UCSB Formula SAE Team",
-              },
+
               {
                 label: "Art Blog",
                 sub: "narasimhasniche.weebly.com",
@@ -589,7 +586,7 @@ function PersonalSection() {
               },
               {
                 label: "Biking · Vegan Cooking · Sketching",
-                sub: "How I decompress",
+                sub: "Just for fun",
               },
             ].map(item => (
               <div key={item.label} style={{
