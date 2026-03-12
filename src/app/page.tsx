@@ -156,8 +156,8 @@ const EXPERIENCE = [
 
 // ─── HOOKS ───────────────────────────────────────────────────────────────────
 
-function useInView(threshold = 0.15) {
-  const ref = useRef(null);
+function useInView(threshold = 0.15): [React.RefObject<HTMLDivElement>, boolean] {
+  const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -172,7 +172,7 @@ function useInView(threshold = 0.15) {
 
 // ─── SMALL COMPONENTS ────────────────────────────────────────────────────────
 
-function Tag({ children, accent }) {
+function Tag({ children, accent }: { children: React.ReactNode; accent?: boolean }) {
   return (
     <span style={{
       display: "inline-block",
@@ -191,7 +191,7 @@ function Tag({ children, accent }) {
   );
 }
 
-function SectionLabel({ children }) {
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div style={{
       display: "flex", alignItems: "center", gap: 14, marginBottom: 56,
@@ -291,7 +291,7 @@ function HeroSection() {
   );
 }
 
-function btnStyle(variant) {
+function btnStyle(variant: string) {
   const base = {
     display: "inline-flex", alignItems: "center", gap: 8,
     padding: "12px 28px", borderRadius: 4, fontSize: 13,
@@ -424,7 +424,7 @@ function ResearchSection() {
 
 function ProjectsSection() {
   const [ref, visible] = useInView();
-  const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState<number | null>(null);
   return (
     <section id="projects" ref={ref} style={{
       padding: "120px 40px", maxWidth: 1100, margin: "0 auto",
@@ -641,8 +641,8 @@ function Footer() {
             fontFamily: "'JetBrains Mono',monospace",
             transition: "all 0.2s",
           }}
-            onMouseEnter={e => { e.target.style.borderColor = "#C8FF00"; e.target.style.color = "#C8FF00"; }}
-            onMouseLeave={e => { e.target.style.borderColor = "rgba(255,255,255,0.12)"; e.target.style.color = "#aaa"; }}
+            onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = "#C8FF00"; (e.target as HTMLElement).style.color = "#C8FF00"; }}
+            onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.target as HTMLElement).style.color = "#aaa"; }}
           >{l.label}</a>
         ))}
       </div>
@@ -682,8 +682,8 @@ function Navbar() {
               fontFamily: "'JetBrains Mono',monospace", letterSpacing: "0.08em",
               transition: "color 0.2s",
             }}
-              onMouseEnter={e => e.target.style.color = "#C8FF00"}
-              onMouseLeave={e => e.target.style.color = "#666"}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = "#C8FF00"}
+              onMouseLeave={e => (e.target as HTMLElement).style.color = "#666"}
             >
               <span style={{ color: "#C8FF00", marginRight: 4, opacity: 0.5 }}>0{i + 1}.</span>{l}
             </a>

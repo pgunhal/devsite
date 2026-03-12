@@ -6,7 +6,7 @@ export const metadata = {
   description: 'AI Developer & NLP Researcher Portfolio',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body style={{ margin: 0, padding: 0, background: '#0a0a0a' }}>
